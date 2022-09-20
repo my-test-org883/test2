@@ -1,8 +1,13 @@
-name: hello-world
+name: Test
 on: push
+
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
+  scan_job:
+    name: Test Action
+    runs-on: "ubuntu-latest"
+
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test new action
+        uses: my-test-org883/test-ga@1.0
