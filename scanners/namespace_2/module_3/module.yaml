@@ -2,7 +2,7 @@ api_version: 1.0.0
 
 id: sarif-empty # unique name
 name: Empty Sarif Scanner # descriptive name
-namespace: boostsecurityio_2 # rule namespace
+namespace: boostsecurityio_3 # rule namespace
 
 config:
   support_diff_scan: true # this scanner may be used on non-main branches
