@@ -8,7 +8,7 @@ rules:
     group: Test group 1
     name: my-rule-1
     pretty_name: My rule 1
-    ref: "localhost/rules/my-rule-1.html"
+    ref: "http://google.com"
   my-rule-2:
     categories:
       - ALL
@@ -18,4 +18,4 @@ rules:
     group: Test group 2
     name: my-rule-2
     pretty_name: My rule 2
-    ref: "localhost/rules/my-rule-2.html"
+    ref: "http://google.com"
