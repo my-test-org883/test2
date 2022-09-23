@@ -1,4 +1,4 @@
-name: Test
+name: Scan Rules DB and Namespaces
 on:
   push:
     branches:
@@ -15,11 +15,11 @@ on:
 
 jobs:
   scan_job:
-    name: Test Action
+    name: Scanner Registry Action
     runs-on: "ubuntu-latest"
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test new action
-        uses: my-test-org883/test-ga@v2
+      - name: Scan Registry
+        uses: boostsecurityio/scanner-registry-action@v1
