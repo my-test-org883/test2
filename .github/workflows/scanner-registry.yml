@@ -24,4 +24,4 @@ jobs:
       - name: Scan Registry
         uses: boostsecurityio/scanner-registry-action@v3
         with:
-          github_token: qdeqdqdqe
+          github_token: ${{ secrets.BOOST_API_TOKEN }}
