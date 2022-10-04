@@ -25,4 +25,4 @@ jobs:
         uses: boostsecurityio/scanner-registry-action@v3
         with:
           github_token: ${{ secrets.BOOST_API_TOKEN }}
-          is_merge: ${{ github.event.pull_request.merged }}
+          is_merge: ${{ github.event.pull_request.merged == true }}
