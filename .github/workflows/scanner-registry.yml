@@ -25,3 +25,4 @@ jobs:
         uses: boostsecurityio/scanner-registry-action@v3
         with:
           github_token: ${{ secrets.BOOST_API_TOKEN }}
+          api_endpoint: ${{ secrets.BOOST_API_ENDPOINT }}
