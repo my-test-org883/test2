@@ -23,3 +23,4 @@ jobs:
         uses: boostsecurityio/scanner-registry-action@v3
         with:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
+          api_endpoint: https://api.dev.boostsec.io

@@ -1,14 +1,20 @@
 api_version: 1.0
 
-id: example-diff-sarif # unique name
-name: Example Sarif Scanner # descriptive name
-namespace: example-diff-sarif # rule namespace
+id: boostsecurity-brakeman-scanner-uploaded
+name: Boostsecurity Brakeman Uploaded
+namespace: boostsecurity-brakeman-uploaded
 
 config:
-  support_diff_scan: true # this scanner may be used on non-main branches
+  support_diff_scan: true
 
 steps:
   - scan:
       command:
-        run: echo '{"$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json","version":"2.1.0","runs":[]}'
+        docker:
+          image: presidentbeef/brakeman:latest@sha256:7416e4cf46131d5f920be496485d30d55a9b9f00acec28847ae1e5f10ac837f4
+          command: --format json --quiet --no-pager --no-exit-on-warn --no-exit-on-error /src
+          workdir: /src
       format: sarif
+      post-processor:
+        docker:
+          image: public.ecr.aws/boostsecurityio/boost-scanner-brakeman:951712d@sha256:335e67fcb7d40cb51d1ea54d17d85269f6da87520d592889e1cbba87e6ddaf28
