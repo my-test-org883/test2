@@ -23,4 +23,4 @@ jobs:
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git fetch origin
-          git --no-pager diff --name-status HEAD..HEAD~1
+          git --no-pager diff --name-status HEAD
