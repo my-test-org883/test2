@@ -2,9 +2,9 @@ rules:
   cwe-1004:
     categories:
       - ALL
-      - cwe-1004
+      - { test: test }
     description: The software uses a cookie to store sensitive information, but the cookie is not marked with the HttpOnly flag.
-    group: { test: test }
+    group: Community Scanners
     name: cwe-1004
     pretty_name: "CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag"
     ref: https://cwe.mitre.org/data/definitions/1004.html
