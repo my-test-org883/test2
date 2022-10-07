@@ -21,5 +21,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Scan Registry
         if: ${{ github.event_name == 'push' }}
-        run: git --no-pager diff HEAD^ HEAD
+        run: git diff HEAD^ HEAD
         shell: bash
