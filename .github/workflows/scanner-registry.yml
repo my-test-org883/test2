@@ -27,4 +27,4 @@ jobs:
           git --version
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          git diff HEAD..HEAD~1
+          git diff --name-status HEAD..HEAD~1
