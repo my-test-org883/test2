@@ -5,7 +5,7 @@ name: Boostsecurity Brakeman Uploaded
 namespace: boostsecurity-brakeman-uploaded
 
 config:
-  support_diff_scan: true
+  support_diff_scan: false
 
 steps:
   - scan:
