@@ -22,4 +22,4 @@ jobs:
       - name: git
         run: |
           git fetch --unshallow --quiet
-          git --no-pager diff --name-status HEAD~1 | python main.py
+          git --no-pager diff --name-status HEAD~1 | awk '{print $2}' | python main.py
