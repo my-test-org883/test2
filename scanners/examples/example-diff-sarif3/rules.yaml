@@ -7,7 +7,7 @@ rules:
     group: Community Scanners
     name: cwe-1004
     pretty_name: "CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag"
-    ref: "{BOOSTSEC_DOC_BASE_URL}/data/definitions/1004.html"
+    ref: https://cwe.mitre.org/data/definitions/1004.html
   cwe-1022:
     categories:
       - ALL
