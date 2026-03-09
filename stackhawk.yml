@@ -2,3 +2,12 @@ app:
   applicationId: bc3b41a6-5a8a-45a7-bcb5-0997ea495ef7
   host: http://localhost:8080
   env: Development
+  autoPolicy: true
+  autoInputVectors: true
+  openApiConf:
+    path: /openapi.yaml
+  graphqlConf:
+    enabled: true
+    schemaPath: /graphql
+    operation: ALL
+    requestMethod: POST
