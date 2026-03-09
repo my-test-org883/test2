@@ -1,0 +1,20 @@
+name: HawkScan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  hawkscan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Start Nginx
+        run: docker run --rm --detach --publish 8080:80 --name nginx_test nginx
+
+      - name: Run HawkScan
+        uses: stackhawk/hawkscan-action@v2.2.0
+        with:
+          apiKey: ${{ secrets.HAWK_API_KEY }}

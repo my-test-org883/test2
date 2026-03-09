@@ -1,0 +1,4 @@
+app:
+  applicationId: xxXXXXXX-xXXX-xxXX-XXxX-xXXxxXXXXaBC
+  host: http://localhost:8080
+  env: Development
